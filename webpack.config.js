@@ -21,8 +21,18 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      // {
+      //   test: /\.jsx?$/,
+      //   exclude: /node_modules/,
+      //   use: ['babel-loader'],
+      // },
+      // {
+      //   test: /\.tsx?$/,
+      //   exclude: /node_modules/,
+      //   use: ['babel-loader'],
+      // },
       {
-        test: /\.js$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
