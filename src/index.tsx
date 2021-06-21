@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
-import { render } from 'react-dom'
-import './style.scss'
+import React, { useState } from "react";
+import { render } from "react-dom";
+import "./style.scss";
 
-const getUserModule = () => import('./common/userAPI')
+const getUserModule = () => import("./common/userAPI");
 
 function App() {
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState(false);
   return (
     <div>
-      <div className="txt">hello</div>
+      <div className="txt">hello U</div>
       <button
         onClick={() =>
           getUserModule().then(({ getUsers }) => {
             getUsers().then((json) => {
-              setLoaded(true)
-              console.log(json)
-            })
+              setLoaded(true);
+              console.log(json);
+            });
           })
         }
       >
         load
       </button>
-      <span>{loaded ? '已加载' : '未加载'}</span>
+      <span>{loaded ? "已加载" : "未加载"}</span>
     </div>
-  )
+  );
 }
 
-render(<App />, document.getElementById('root'))
+render(<App />, document.getElementById("root"));
