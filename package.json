@@ -14,7 +14,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts.tsx,css,scss}": "yarn lint"
+    "src/**/*.{js,jsx,ts,tsx,css,scss}": "yarn lint"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
